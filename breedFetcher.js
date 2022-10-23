@@ -11,12 +11,12 @@ const fetchBreedDescription = (breedName, cb) => {
 
   //make request
   request((apiRequestURL + breedName), function(error, response, body) {
-    console.log(typeof body);
+    //console.log(typeof body);
 
     //parse JSON string to object
     const data = JSON.parse(body);
-    console.log(data);
-    console.log(typeof data);
+    //console.log(data);
+    //console.log(typeof data);
     let err = error;
     let desc = null;
 
@@ -29,7 +29,7 @@ const fetchBreedDescription = (breedName, cb) => {
 
     //get the description
     desc = data[0].description;
-    console.log(data[0].description);
+    //console.log(data[0].description);
 
     //call callback:
     cb(err, desc);
