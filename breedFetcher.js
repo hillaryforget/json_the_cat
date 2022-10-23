@@ -3,7 +3,8 @@
 const request = require('request');
 const apiRequestURL = 'https://api.thecatapi.com/v1/breeds/search?q=';
 
-const fetchBreed = (breedName, cb) => {
+//main request logic
+const fetchBreedDescription = (breedName, cb) => {
   if (breedName !== null) {
     return;
   }
@@ -35,18 +36,4 @@ const fetchBreed = (breedName, cb) => {
   });
 };
 
-module.exports = { fetchBreed };
-
-
-
-
-
-
-
-
-
-
-//const tags = JSON.parse(body);
-//console.log("Json parsed: ", tags, typeof tags);
-  
-
+module.exports = { fetchBreedDescription };
